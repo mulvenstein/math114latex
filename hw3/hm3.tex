@@ -1,0 +1,116 @@
+%chapter 3, Tom Mulvey, 2/27/18
+\documentclass[12pt]{article}
+
+%do i even need to include these lol
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{xcolor}
+
+%new macros for r,q,n,z
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ind}{\hspace{10mm}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{conj}[thm]{Conjecture}
+
+\begin{document}
+
+\centerline{\sc \large Homework 3 | Tom Mulvey }
+
+\centerline{\sc 2/27/18}
+
+\vspace{2pc}
+
+\begin{enumerate}
+
+\item[3.8] ) Prove if x is an odd int, then 9x+5 is even
+   \begin{proof}  
+      Assume $x$ is an odd integer, then..
+
+      $x=2k+1$ for some $k \in \Z$
+      
+      It follows that $9x+5$=$9(2k+1)+5$
+
+      =$18k+14$
+
+      =$2(9k+7)$ where 9k+7 is an integer
+
+      This is obvioulsy even.
+   \end{proof}
+\item[3.20] )
+   \begin{proof} $let x\in \Z$ Prove that $3x+1$ is even $\iff$ $5x-2$ is odd
+	
+      \begin{lem}
+         Let $x \in \Z$. If $3x+1$ is even then $x$ is odd.
+
+
+	 Proof (lemma):We will prove this lemma by the contrapositive appproach. If $x$ is even, then $3x+1$ is odd. If $x$ is even, it follows that $x$ = $2k$ for some $k \in \Z$ 
+
+
+         $3x+1$ $=3(2k) +1$ $=3*$an even integer$ +1$
+
+	 This is obviously odd.
+      \end{lem}	
+      Proof: Fot the forward direction, I will prove directly. $Let 3x+1$ be an even integer. by the lemma,the integer $x$ is od. Since $x$ is odd, $x=2k+1$ for some $k \in \Z$. Thus
+
+      $5x-2=5(2k+1)-2=10k+5-2=10k+3$
+      
+      $=3(2k+1) + 4k$
+
+      $=3(2k+1) + 2(2k)$
+
+      $=3*$an odd integer + an even integer
+
+      $=$an odd integer
+
+       For the reverse direction, I will prove by the contrapositive. 
+
+       The proof is similar in the reverse direction as the forward.
+   \end{proof}
+\item[3.26] ) Prove that if $n \in \Z$ then $n^2 -3n +9$ is odd.
+   \begin{proof}
+      I will argue by cases that if $n$ is either odd OR even, $n^2 -3n +9$ is odd.
+
+
+      CASE 1: $n$ is even
+      $\ind$If $n$ is even, it follows that $n$=$2k$ for some $k \in \Z$
+
+      $\ind$thus $n^2-3n+9$ = $(2k)^2 -3(2k) + 9$
+ 
+      $\ind$=$4k^2-6k+9$
+
+      $\ind$=$4k^2-3(2k+3)$
+
+      $\ind$=even integer - 3*(odd integer)
+
+      $\ind$odd integer
+
+      CASE 2: $n$ is odd
+      
+      $\ind$If $n$ is odd, it follows that $n=2k+1$ for some $k \in \Z$
+
+      $\ind$thus $n^2-3n+9$ = $(2k+1)^2 -3(2k+1) + 9$a
+
+      $\ind$=$4k^2+4k+1-6k-3+9$
+
+      $\ind$=$4k^2-2k+7$
+
+      $\ind$=$2(2k^2-1k)+7$
+
+      $\ind$=even integer + odd integer
+   
+      $\ind$=obviously odd
+
+   $n^2-3n+9$ is odd when $n$ is odd or evena
+   \end{proof}
+
+\end{enumerate}
+\end {document}

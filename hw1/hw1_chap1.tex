@@ -1,0 +1,79 @@
+%chapter 1, tom mulvey, 2/7/18
+\documentclass[12pt]{article}
+
+%do i even need to include these lol#linuxgang
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+%new macros for r,q,n,z
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+
+%This creates an environment for a lemma
+\newtheorem{lemma}{Lemma}
+
+\begin{document}
+
+\title{Homework 1 | Chapter 1}
+\author{Tom Mulvey}
+
+\maketitle
+
+\begin{enumerate}
+
+\item[1.10]
+\begin{enumerate}
+\item
+   A = \{ 1, 2, 3 \}, B = \{ 1, 2, 3 \}, C = \{ 1, 2, 3, cat \}
+   
+   $A\subseteq B\subset C$
+\item
+   A = \{ \}, B = \{ \{ \} \}, C = \{ \{ \{ \} \} \}
+   
+   $A\in B$, $B\in C$, and $A\notin C$
+\item
+   A = \{ tom \}, B = \{ \{ tom \} \}, C = \{ \{ tom \}, tom  \}
+
+   $A\in B$ and $A\subset C$
+\end{enumerate}
+
+\item[1.30]
+\begin{enumerate}
+\item
+   $A = \big[ -1, 3 \big], B = ( -{\infty}, $ $-1 \big]u\big[1, \infty )$ $C = \big[ -5, -1 \big] $
+
+\item
+   $A\cup B$ = $( -\infty, \infty )$
+
+   $A\cap B$ = $\big[ -1 \big]u\big[ 1, 3 \big]$
+
+   $B\cap C$ = $\big[ -5, -1 \big]u\big[ 1 \big]$
+
+   $B - C$ = $(\infty,-5)u(1,\infty)$
+\end{enumerate}
+
+\item[1.46]
+\begin{enumerate}
+\item
+   $\bigcup_{i=1}^{\infty} \bigg(\frac{-1}{i}, \frac{1}{i}\bigg) = (-1, 1)$
+   
+   $\bigcap_{i=1}^{\infty} \bigg(\frac{-1}{i}, \frac{1}{i}\bigg) = \{\}$
+\item
+   $\bigcup_{i=1}^{\infty} \bigg[\frac{-1}{i}, \frac{1}{i}\bigg] = [0,2]$
+   
+   $\bigcap_{i=1}^{\infty} \bigg[\frac{i-1}{i}, \frac{i+1}{i}\bigg] = [1]$
+\end{enumerate}
+
+\item[1.56]
+   $A = \{1,2,3,...,12\}$
+   
+   $S = \{ \{1,2,3,4\}, \{5\}, \{6,7,8,9\}, \{10\}, \{11,12\}  \}$
+
+   $T = \{ \{1,2,3,4\}, \{5\}, \{6,7,8,9\}, \{10\}  \}$
+\end{enumerate}
+
+\end {document}

@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\newcommand{\dlim}{\displaystyle\lim}
+\newcommand{\theorem}{{\bf Theorem.}}
+
+\pagestyle{empty}
+
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\N}{\mathbb N}
+\newcommand{\R}{\mathbb R}
+
+\begin{document}
+
+\noindent
+{\bf\large Using Align and Align*}
+
+\bigskip
+
+This is the align environment. 
+
+\begin{align}
+(x-3)(x-5)+5 & = x^2-8x+15+5\\
+& = x^2-8x+20\\
+& = (x-4)^2+4\\
+& \geq 4.
+\end{align}
+
+This is the align* environment.
+
+\begin{align*}
+(x-3)(x-5)+5 & = x^2-8x+15+5\\
+& = x^2-8x+20\\
+& = (x-4)^2+4\\
+& \geq 4.
+\end{align*}
+
+Both environments automatically place every entry into math mode, so you do not need to use dollar signs.
+
+Using additional ampersands, here I've created a third column into which I've inserted comments. I used \textbackslash text to make the comments appear as regular text within the math mode environment. I do not know why the text is right justified.
+
+\begin{align*}
+(x-3)(x-5)+5 & = x^2-8x+15+5 & \text{Expand} \\
+& = x^2-8x+20 & \text{Combine constants}\\
+& = (x-4)^2+4 & \text{I am completing the square}\\
+& \geq 4. & \text{Because $(x-4)^2\geq 0$}
+\end{align*}
+\end{document} 

@@ -1,0 +1,76 @@
+\documentclass[12pt]{amsart}
+
+% These are some useful packages
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% This allows me to type nice looking symbols for the rational, natural, integer, and real numbers using only two keystrokes
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+
+%This creates an environments definitions and examples
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+
+%This creates italicized results
+\theoremstyle{theorem}
+\newtheorem{thm}{Theorem}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{conjecture}[thm]{Conjecture}
+
+
+
+
+
+\begin{document}
+
+\title{A Little Number Theory}
+\author{D. Seabold}
+
+\maketitle
+
+\begin{defn}
+A natural number $p>1$ is {\em prime} if the only positive divisors of $p$ are $1$ and $p$.
+\end{defn}
+
+\begin{example}
+The numbers $2, 3, 5, 7, 11,$ and $13$ are prime.  The numbers $9(=3\cdot 3)$ and $10(=2\cdot 5)$ are not.
+\end{example}
+
+\begin{lemma}
+\label{divisibility}
+Every natural number greater than 1 has a prime divisor.
+\end{lemma}
+
+\begin{proof} Let $n>1$ be a natural number.  If $n$ is prime, we are done.  If not, then $n$ can be factored into a product of two positive divisors other than 1 and $n$, say $n=n_1 a_1$.  If $n_1$ is prime, then, since it divides $n$, we are done.  If not, then we can factor $n_1$ into the product $n_2a_2$.  If $n_2$ is prime, then since $n_2$ divides $n$, we done.  If not, we can factor $n_2$ into the product $n_3a_3$.  Continuing in this fashion, we obtain a sequence of smaller and smaller positive numbers $n_1$, $n_2$, $n_3, \ldots$ that each divide $n$. Since any strictly decreasing sequence of  positive numbers must be finite, we must finally obtain a number $n_i$ which is prime and which divides $n$.
+\end{proof}
+
+\begin{example}
+The prime divisors of $65$ are $5$ and $13$.  The prime divisors of $180(=2\cdot 2\cdot 3\cdot 3\cdot 5)$ are $2$, $3$, and $5$.
+\end{example}
+
+\begin{thm}
+There are infinitely many prime numbers.
+\end{thm}
+\begin{proof}  Suppose to the contrary that there are only finitely prime numbers, $p_1, p_2, p_3,\ldots, p_n$.  We will show that this leads to a contradiction.  Consider the number $m=p_1\cdot p_2\cdot p_3\cdots p_{n+1}$.  Note that $p_1$ does not divide $m$ since $m$ is one more than a multiple of $p_1$ (hence the remainder on division by $p_1$ is nonzero).  In fact, for each $i=1, 2, 3,\ldots, n$, we find that $m$ is one more than a multiple of $p_i$, so $p_i$ is not a divisor of $m$.  Thus $m$ has no prime divisor.  This contradicts Lemma~\ref{divisibility}, which states that every integer $m>1$ has a prime divisor.
+\end{proof}
+
+\begin{defn}
+Two prime numbers are {\em twin primes} if they differ by $2$.
+\end{defn}
+
+\begin{example}
+The integers $3$ and $5$ are twin primes.  The integers $11$ and $13$ are twin primes.
+\end{example}
+
+\begin{conjecture}
+There are infinitely many pairs of twin primes.
+\end{conjecture}
+
+
+ \end{document}   

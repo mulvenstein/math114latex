@@ -1,0 +1,114 @@
+%chapter 1, tom mulvey, 2/7/18
+\documentclass[12pt]{article}
+
+%do i even need to include these lol
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{xcolor}
+
+%new macros for r,q,n,z
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ind}{\hspace{10mm}}
+
+%This creates an environment for a lemma
+\newtheorem{lemma}{Lemma}
+
+\begin{document}
+
+\centerline{\sc \large Homework 2 | Tom Mulvey }
+
+\centerline{\sc 2/15/18}
+
+\vspace{2pc}
+
+\begin{enumerate}
+
+\item[2.14]
+
+   \begin{enumerate}
+
+      \item[A] ) At most, one of my library books are overdue.
+
+      \item[B] ) Both of my two friends did not misplace their homework.
+
+      \item[C] ) There exists at least one person who thought that would happen.
+
+      \item[D] ) It's often that my profesor teaches that course.
+
+      \item[E] ) It is not surprising that two students recieved the same exam        score.
+		
+
+   \end{enumerate}
+
+
+\item[2.34]
+
+   \begin{enumerate}
+
+      \item[B] ) For all integers, if a given integer is odd, then the square of that integer is odd.
+
+      \item[C] ) For any integer, n, if 3n + 7 is even, then n is odd.
+
+      \item[D] ) If a given function is $f(x)=cos(x)$, then $f`(x)=-sin(x)$
+
+      \item[F] ) If a given integer, n, is even, then $n^3$ is also even.
+		
+
+   \end{enumerate}
+
+
+\item[2.76]
+\ind$P(x,y,z)$: $(x-1)^2$ + $(y-2)^2$ + $(z-2)^2$ $>$ 0 
+   \begin{enumerate}
+
+      \item[A] ) For all real numbers $x,y, $ and $ z$, $(x-1)^2$ + $(y-2)^2$ + $(z-2)^2$ is greater than zero. 
+
+      \item[B] ) $False$
+
+      Assume $\forall x,y,z \in \R$, $P(x,y,z)$: $(x-1)^2$ + $(y-2)^2$ + $(z-2)^2$ $>$0 
+      holds true.
+
+      \ind $let$ $x=1$, $y=2$, and $z=2$. 
+      
+      \ind with the assumption $P(x,y,z)$ holds for all real numbers,then
+  
+      \ind \ind $(1-1)^2$ + $(2-2)^2$ + $(2-2)^2$ $>$0
+
+      \ind \ind $\iff $ $(0)^2$ + $(0)^2$ + $(0)^2$ $>$0
+
+      \ind \ind $\iff $ $0 > 0$
+
+      \ind \ind We have reached a contradiction.
+
+      \ind \ind $0 \ngtr 0$ \fboxsep=2mm \fboxrule=1mm \fcolorbox{black}{blue!20!white}{\null}
+
+
+      \item[C] ) $\exists x,y,z \in \R$ $s.t.$ $(x-1)^2$ + $(y-2)^2$ + $(z-2)^2$ $\leq$0
+
+      \item[D] ) There exists a tuple, composed of x, y, and z in the Real Numbers, such that  $(x-1)^2$ + $(y-2)^2$ + $(z-2)^2$ is less than or equal to zero.
+
+      \item[E] ) $True$
+
+      \ind Assume $\neg $ $P(x,y,z)$ is true.
+
+      \ind $\iff $ $\exists x,y,z \in \R$ $s.t.$ $(x-1)^2$ + $(y-2)^2$ + $(z-2)^2$ $\leq$0
+
+      \ind $let$ $x=1$, $y=2$, and $z=2$
+
+      \ind $\iff $ $(1-1)^2$ + $(2-2)^2$ + $(2-2)^2$ $\leq$0
+
+      \ind \ind $\iff $ $(0)^2$ + $(0)^2$ + $(0)^2$ $\leq$0
+
+      \ind \ind $\iff $ $0 \leq 0$ \fboxsep=2mm \fboxrule=1mm \fcolorbox{black}{blue!20!white}{\null}
+
+		
+   \end{enumerate}
+
+\end{enumerate}
+
+\end {document}

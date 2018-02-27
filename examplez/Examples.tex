@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+
+% These are some useful packages
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% This allows me to type nice looking symbols for the rational, natural, integer, and real numbers using only two keystrokes
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+
+%This creates an environment for a lemma
+\newtheorem{lemma}{Lemma}
+
+
+\begin{document}
+
+\title{Some \LaTeX Examples}
+\author{D. Seabold}
+
+\maketitle
+
+\noindent
+Common symbols: $\in$ $\notin$ $\subset$ $\subseteq$ $\nsubseteq$ $\cup$ $\cap$ $\bigcup$ $\bigcap$ $\times$ $\mid$ $\equiv$ $\not\equiv$ $\vee$ $\wedge$ $\implies$ $\iff$ $\longrightarrow$ $\circ$
+
+\begin{enumerate}
+\item Given any two real numbers $x$ and $y$ with $x<y$, there is a real number $z$ such that $x<z<y$.
+
+\item  If $a, b\in\N$ and $b\neq 0$, then $\frac{a}{b} \in \Q$.
+        
+\item My fraction doesn't have to be cramped $(\frac{x^3-3x+1}{x^2-2})$. It can look like $\left(\displaystyle\frac{x^3-3x+1}{x^2-2}\right)$ instead. Check out the code for the large parentheses.
+
+\item For every $x\in \R$, 
+    \begin{itemize}
+    \item  $x<0$, 
+    \item  $x=0$, or
+    \item  $x>0$.
+    \end{itemize}
+    
+\item For every $x\in \R$,
+    \begin{enumerate}
+    \item  $x<0$,
+    \item  $x=0$, or
+    \item  $x>0$.
+    \end{enumerate}
+    
+\item  For any two sets $A$ and $B$
+
+    $$\overline{A\cup B}=\overline{A}\cap\overline{B}.$$
+    
+\item  I can also typeset that like this:
+
+    \[ \overline{A\cup B}=\overline{A}\cap\overline{B} \]
+    
+\item  Suppose $A_1$, $A_2$, $A_3$, are sets. Distinguish between the union of two sets
+    
+    $$A_1\cup A_2$$
+    
+    and the union of infinitely many sets:
+    
+    $$\bigcup_{i=1}^{\infty} A_i.$$   
+    
+\item Suppose that $A\subseteq B$. Then if $x\notin B$, it follows that $x\notin A$.    
+    
+\item  If $f:\R\longrightarrow \R$ is differentiable, then it is continuous.
+    
+\item  If both $f:A\longrightarrow B$ and $g:B\longrightarrow C$ are bijections, then their composition $g\circ f$ and the inverse $f^{-1}$ are bijections as well.
+    
+\item  If $n\equiv 3 \pmod 4$ then $n^2\equiv 1 \pmod 4$. Of course, this implies that $n^2\not\equiv 2 \pmod{4}$.
+    
+\item  If $n$ is a prime number and $n\mid ab$ then either $n\mid a$ or $n\mid b$. Hence if $n\nmid a$ then $n\mid b$.
+
+\item  Two sets, $A$ and $B$, are said to be {\em disjoint} if $$A\cap B=\emptyset.$$
+    
+\item If $0\leq a\leq b$ then $a^2\leq b^2$.
+
+\item  Let $S=\{ n\in\Z : n^2+3n-1\geq 0\}$.
+
+\item  Let $T=\{ 2, 4, 8, 16, \ldots, 1024\}$.
+
+\item  For every $\epsilon>0$ there is a $\delta>0$ such that $|f(x)-f(y)|<\epsilon$ whenever $|x-y|<\delta$.
+    
+
+\end{enumerate}
+
+\begin{lemma} If $0<x$ then there exists a $y$ such that $0<y<x$.
+\end{lemma}
+\begin{proof}
+Let $y=x/2$.
+\end{proof}
+
+\begin{lemma} For every positive integer $n$, $1\cdot 3\cdot 5\cdots (2n-1)=\displaystyle\frac{(2n)!}{2^n\cdot n!}$.
+\end{lemma}
+\begin{proof}
+Left to the reader. (Hint: Use induction.)
+\end{proof}
+
+
+
+ \end{document}   

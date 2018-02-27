@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+
+% These are some useful packages
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% This allows me to type nice looking symbols for the rational, natural, integer, and real numbers using only two keystrokes
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+
+%This creates an environment for a lemma
+\newtheorem{lemma}{Lemma}
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\title{Some Tables}
+\author{D. Seabold}
+
+\maketitle
+
+An open table:
+
+\medskip
+
+\begin{tabular}{c|c|c|c|c}
+$P$ & $Q$ & $\sim P$ & $\sim Q$ & $\sim P \wedge \sim Q$\\ \hline
+
+T & T & F & F & F \\
+T & F & F & T & F \\
+F & T & T & F & F \\
+F & F & T & T & T 
+\end{tabular}
+
+\bigskip
+
+A closed table:
+
+\medskip
+
+\begin{tabular}{|c|c|c|c|c|} \hline
+$P$ & $Q$ & $\sim P$ & $\sim Q$ & $\sim P \wedge \sim Q$\\ \hline
+
+T & T & F & F & F \\ \hline
+T & F & F & T & F \\ \hline
+F & T & T & F & F \\ \hline
+F & F & T & T & T\\ \hline
+\end{tabular}
+
+\bigskip
+
+Right-justified:
+
+\medskip
+
+\begin{tabular}{|r|r|r|r|r|} \hline
+$P$ & $Q$ & $\sim P$ & $\sim Q$ & $\sim P \wedge \sim Q$\\ \hline
+
+T & T & F & F & F \\ \hline
+T & F & F & T & F \\ \hline
+F & T & T & F & F \\ \hline
+F & F & T & T & T\\ \hline
+\end{tabular}
+
+\bigskip
+
+Left-justified:
+
+\medskip
+
+\begin{tabular}{|l|l|l|l|l|} \hline
+$P$ & $Q$ & $\sim P$ & $\sim Q$ & $\sim P \wedge \sim Q$\\ \hline
+
+T & T & F & F & F \\ \hline
+T & F & F & T & F \\ \hline
+F & T & T & F & F \\ \hline
+F & F & T & T & T\\ \hline
+\end{tabular}
+
+ \end{document}   
