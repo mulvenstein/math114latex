@@ -1,0 +1,100 @@
+%chapter 4, Tom Mulvey, 3/7/18
+\documentclass[12pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{xcolor}
+
+%new macros for r,q,n,z
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ind}{\hspace{10mm}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{conj}[thm]{Conjecture}
+
+%\fboxsep=2mm \fboxrule=1mm \fcolorbox{black}{blue!20!white}{\null}
+
+\usepackage{microtype}
+
+\begin{document}
+    \centerline{\sc \large Tom Mulvey | Homework 4 }
+    \centerline{\sc 3/8/18}
+
+    \vspace{2pc}
+
+	\begin{enumerate}
+		\item[4.8])
+			Let $x \in \Z$. Prove that if $2|(x^2-5)$ then $4|(x^2-5)$. \\
+			\ind Assume $2|(x^2-5)$ is true. Since 2 divides $(x^2-5)$, $(x^2-5)$
+			is an even integer that can represented as $2k$ for some $k\in\Z$.\\
+			\\Thus $(x^2-5)=2k$\\
+			$x^2=2k+5$\\
+			$x^2=2(k+2)+1$, and since $x^2$ is odd, $x$ is too by theorem 3.12\\
+			\\Since x is odd, $x=2p+1$ for some $p\in\Z$\\
+			The expression can be rewritten as ...\\
+			\\$(2p+1)^2 - 5$ = $4p^2 + 4p + 1 - 4$ = $4(p^2 + p - 1)$.\\
+			Since $p^2+p-1\in\Z$, it shows that $x^2-5$ is divisble by 4. 
+			\fboxsep=2mm \fboxrule=1mm \fcolorbox{black}{blue!20!white}{\null}
+		\item[4.18])
+			Let $m,n\in\N$ and $m|n$. Prove if $a,b\in\Z$ s.t. if $a \equiv b$ mod $n$ \\
+			then $a\equiv b$ mod $m$.\\
+			\\Assume $a \equiv b$ mod $n$. By the definition of congruence, it can
+			be rewritten as $n|a-b$. By the same means, $a\equiv b$ mod $m$ can be 
+			written as $m|a-b$\\
+			\\Now let another integer, $t$, equal $a-b$. $n|a-b$ can now be represented
+			as $n|t$, and $m|a-b$ now equals $m|t$ 
+			\\Recall that $m|n$. We also just stated $n|t$. Using the theorem in 4.1,
+			(if $a|b$ and $b|c$, then $a|c$), the same logic can be applied here. So Since
+			$m|n$ and $n|t$,it follows that $m|t$. \\
+			\\Unsubbing $t$, we get $m|t$ = $m|a-b$. Now using the definition of
+			congruence, we get $a \equiv b$ mod $m$, which is the result wanted.
+			\fboxsep=2mm \fboxrule=1mm \fcolorbox{black}{blue!20!white}{\null}
+		\item[4.40])
+			Let $A$ and $B$ be sets, Prove that $A \cup B$ = $(A - B)\cup(B-A)\cup
+			(A\cap B)$\\
+			\\For the backward direction,\\
+			let $x\in(A - B)\cup(B-A)\cup(A\cap B)$ This is logically equivalent to\
+ 	 		$x\in(A - B)$ $\vee$ $x\in(B - A)$ $\vee$ $x\in(A\cap B)$\\
+ 	 		These terms can be expressed as..\\
+ 	 		($x\in A$ $\wedge$ $x\notin B$) $\vee$ ($x\notin A$ $\wedge$ $x\in B$) $\vee$ ($x\in A$ $\wedge$ $x\in B$)\\The first and third can be simplified. No reason to have two $x\in A$.
+ 	 		($x\in A$ $\wedge$ ($x\in B$ $\vee$ $x\notin B$) ) $\vee$ ($x\notin A$ $\wedge$ $x\in B$).
+ 	 		\\Now it's always true x is either in B or it is not, so that can be omitted.\\
+ 	 		Thus we get $x\in A$ $\vee$ ($x\notin A$ $\wedge$ $x\in B$). \\
+ 	 		Now we have either x is in A, or x is in B and not A. The $x\notin A$ is 
+ 	 		logically redundant, because if x is not in A, it is in B. The result is $x
+ 	 		\in A$ $\vee$ $x\in B$, which can be rewritten as $x\in A\cup B$. This 
+ 	 		implies that $(A - B)\cup(B-A)\cup (A\cap B)$ $\subseteq$ $A \cup B$ 
+ 	 		.\\
+ 	 		\\ For the forward direction, we will prove directly. Suppose $x\in A\cup B$. 
+ 	 		There are three possibilities.\\1) $x\in A$ but $x\notin B$ or\\
+ 	 		2) $x\notin A$ but $x\in B$ or \\3) $x\in A$ and $x\in B$.\\ 
+ 	 		Writting in logic,
+ 	 		the product is ($x\in A$ $\wedge$ $x\notin B$) $\vee$ ($x\notin A$ $\wedge$ 
+ 	 		$x\in B$) $\vee$ ($x\in A$ $\wedge$ $x\in B$). 
+ 	 		\\This is equivalent to $x\in(A - B)$ $\vee$ $x\in(B - A)$ $\vee$ $x\in(A\cap B)$
+ 	 		\\Which is the exact same as $x\in(A - B)\cup(B-A)\cup(A\cap B)$.\\
+ 	 		$A \cup B$ $\subseteq$ $(A - B)\cup(B-A)\cup (A\cap B)$
+ 	 		\fboxsep=2mm \fboxrule=1mm \fcolorbox{black}{blue!20!white}{\null}
+ 	 		
+ 		\item[4.46]) 
+ 			Let $A$ and $B$ be sets. Prove $A\cup B$ = $A\cap B$ $\iff$ $A=B$\\
+ 			\\For the reverse direction, assume $A=B$. \\Thus $A\cup B$ = $A\cap B$
+ 			is logically equivalent to $A\cup A$ = $A\cap A$.
+ 			Replacing B with A, from our assumption, gives $A\cup A$ = $A$ and that $A\cap A$ = $A$.\\
+ 			The result is $A$=$A$, and obivously $A \subseteq A$ and vice versa.\\
+ 			\\For the forward direction, assume $A\cup B$ = $A\cap B$.\\
+ 			It is the case such that $A\subseteq A\cup B \subseteq A\cap B\subseteq B$.\\
+ 			And similarly with B, $B\subseteq A\cup B \subseteq A\cap B\subseteq A$.
+ 			\\$A\subseteq B$ and $B\subseteq A$.
+ 			\fboxsep=2mm \fboxrule=1mm \fcolorbox{black}{blue!20!white}{\null}
+	\end{enumerate}
+
+\end {document}
