@@ -1,0 +1,252 @@
+%chapter 4, Tom Mulvey, 3/7/18
+\documentclass[12pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{microtype}
+
+%new macros for r,q,n,z
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ind}{\hspace{10mm}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{conj}[thm]{Conjecture}
+
+%\fboxsep=2mm \fboxrule=1mm \fcolorbox{black}{blue!20!white}{\null}
+%\fbox{\includegraphics[height=1cm]{proof.jpeg}}
+%{%
+%	\setlength{\fboxsep}{1pt}%
+%	\setlength{\fboxrule}{2pt}%
+%	\fbox{\includegraphics[height=1cm]{proof.jpeg}}
+%}%
+
+\begin{document}
+    \centerline{\sc \large Tom Mulvey | Homework 5 }
+    \centerline{\sc 3/27/18}
+
+    \vspace{2pc}
+
+	\begin{enumerate}
+		\item[5.12]) Prove that there is no largest negative rational number.
+		
+			\ind $Proof:$
+		
+			\ind \ind Lean towards the contrary that there is a largest negative
+		
+			\ind \ind rational number. Let's call that largest negative number $r$,
+		
+			\ind \ind and let $r \in \Q$. Since $r \in \Q$ , it follows that $r$ can 
+		
+			\ind \ind be represented as $\frac{-a}{b}$ where $a$ , $b$ $\in \Z$ (by definition). 
+		
+			\ind \ind Now let's divide $\frac{-a}{b}$ by 2, resulting in
+			          $\frac{-a}{2b}$.
+		          
+			\ind \ind Since $-a$,$2b$ $\in \Z$ and $\frac{-a}{b}$ $\textless$ $\frac{-a}{2b}$, 
+			          we have reached
+			          
+			\ind \ind a contradiction, thus proving there is no largest negative 
+		
+			\ind  \ind rational number.		
+			\ind \ind \ind \ind \ind \ind \ind{%
+				\setlength{\fboxsep}{1pt}%
+				\setlength{\fboxrule}{2pt}%
+				\fbox{\includegraphics[height=.9cm]{proof.jpeg}}
+			}%	
+			
+			
+		\item[5.20]) Let $a$ be an irrational number and $r$ be a nonzero rational number. Prove that if $s$ is
+		             a real number, then either $ar$+$s$ or $ar$-$s$ is irrational.
+		
+			\ind $Proof:$
+		
+			\ind \ind Lean towards the contrary that either $ar$+$s$ or $ar$-.$s$
+		
+			\ind \ind  is rational. There are 3 cases: Both $ar$+$s$ and $ar$-.$s$ are
+		
+			\ind \ind rational (Case 1); only $ar$+$s$ is rational (Case 2);  
+		
+			\ind \ind only $ar$-$s$ is rational (Case 3).
+		
+			\ind \ind \ind CASE 1:
+		          
+			\ind \ind \ind By definiton, if $ar$+$s$ and $ar$-.$s$ are rational, then
+			          
+			\ind \ind \ind $ar$+$s$ and $ar$-.$s$ can be represent as $\frac{p}{q}$ and $\frac{v}{w}$
+		
+			\ind  \ind \ind respectfully, such that $p,q,v,w \in \Z$.
+			
+			\ind \ind \ind It  MUST follow that:
+			
+			\ind \ind \ind \ind $ar + s = \frac{p}{q}$ and $ar - s = \frac{v}{w}$.   
+						
+			\ind \ind \ind $\iff$ $ar = \frac{p}{q} - s$ and $ar = \frac{v}{w} + s $.   
+			
+			\ind \ind \ind $\iff$ $ar = \frac{p}{q} - \frac{sq}{q}$ and $ar = \frac{v}{w} + \frac{sw}{w} $.  
+			
+			\ind \ind \ind $ar = \frac{p - sq}{q} $ and $ar = \frac{v + sw}{w} $.
+			
+			\ind \ind \ind $a = \frac{p - sq}{rq} $ and $a = \frac{v + sw}{rw} $.  
+			
+			\ind \ind \ind We have reached a contradiction. Recall in the defintion 
+			
+			\ind \ind \ind of $a$, we claimed that $a$ was irrational, but since 
+			
+			\ind \ind \ind $\frac{p - sq}{rq} $,$\frac{v + sw}{rw} \in \Z$, $a$ is not irrational.
+			
+			\ind \ind \ind This concludes case 1.
+			
+			\ind \ind Cases 2 and 3 can be ommitted because the 
+			
+			\ind \ind proofs of cases 2 and 3 can be found in Case 1.
+			
+			\ind \ind By following $ar + s$ and $ar - s$ seperately, these
+			
+			\ind \ind prove case 2 and 3 respectfully.
+			
+			\ind \ind \ind \ind \ind \ind \ind \ind \ind \ind \ind \ind {%
+				\setlength{\fboxsep}{1pt}%
+				\setlength{\fboxrule}{2pt}%
+				\fbox{\includegraphics[height=.9cm]{proof.jpeg}}
+			}%
+			
+		\item[5.22]) Prove that $\sqrt{2}$ + $\sqrt{3}$ is irrational. 
+		
+			\ind $Proof:$ I will prove this by the contradiction method.
+		
+		    \begin{lem} $\sqrt{6}$ is irrational.
+			
+			\ind For the lemma, lean towards the contrary. Assume 
+			
+			\ind $\sqrt{6}$ $\in \Q$, which means $\sqrt{6}$ = $\frac{a}{b}$ where 
+			
+			\ind $a,b$ $\in \Z$. The square of a rational number is still rational, thus
+			
+			\ind $\frac{a}{b}$ * $\frac{a}{b}$ = $\sqrt{6}$ * $\sqrt{6}$.
+			
+			\ind $\iff$ $\frac{a^2}{b^2}$ = 6.
+			
+			\ind $\iff$ $a^2$ = 6$b^2$.
+			
+			\ind 6$b^2$ = 2(3($b^2$)), and since 3($b^2$) $\in \Z$, it follows
+			
+			\ind that a must be even (If the square of an even number is even).
+			
+			\ind Thus $\exists$ $c$ s.t $a=2c$ where $c \in \Z$. Replacing $a$ with $c$ 
+			
+			\ind gives $(2c)^2$ = $6b^2$. $\iff$ 4$c^2$ = $6b^2$. 
+			
+			\ind $\iff$ $2c^2$ = $3b^2$. Now we see $3b^2$ must be even since 
+			
+			\ind $2c^2$ is even.
+			
+			\ind If both $a$ and $b$ are even, they share atleast a common divisor of 2.
+			
+			\ind We have reached a contradiction (by the definition of rational  
+			
+			\ind numbers, $a$ and $b$ must be coprime, which they are not 
+			
+			\ind if they share 2 as a factor). This ends the lemma, demonstrating
+			
+			\ind that $\sqrt{6}$ is irrational.
+ 			 
+			\end{lem}
+			
+			
+		
+			\ind \ind Assume that $\sqrt{2}$ + $\sqrt{3}$ is rational. Since 
+			
+			\ind \ind $\sqrt{2}$ + $\sqrt{3}$ $\in \Q$, then the square of $\sqrt{2}$ + $\sqrt{3}$ is
+			
+			\ind \ind $\in \Q$ as well (this is obvious).
+			
+			\ind \ind Expressing the square of $\sqrt{2}$ + $\sqrt{3}$ yields $(\sqrt{2} + \sqrt{3})^2$.
+			
+			\ind \ind $\iff$ 2 + $\sqrt{2} * \sqrt{3} $ + $\sqrt{2} * \sqrt{3} $ + 3.
+			
+			\ind \ind $\iff$ 5 + 2$\sqrt{6}$.
+			
+			\ind \ind We have reached a contradiction. If $\sqrt{2}$ + $\sqrt{3}$
+			
+			\ind \ind was rational, the result of the square would be as well. But 
+			
+			\ind \ind since $\sqrt{6}$ is irrational, by the lemma, then it is impossible 
+			
+			\ind \ind $\sqrt{2}$ + $\sqrt{3}$ is rational. (2 times an irrational number
+			
+			\ind \ind  is still irrational).
+			
+			\ind \ind \ind \ind \ind \ind \ind \ind \ind \ind \ind \ind {%
+				\setlength{\fboxsep}{1pt}%
+				\setlength{\fboxrule}{2pt}%
+				\fbox{\includegraphics[height=.9cm]{proof.jpeg}}
+			}%
+			
+		\item[5.46] ) Prove there exists a unique real number solution to the equation $x^3 + x^2 -1 = 0$, let's 		
+		call this f(x), between $x=\frac{2}{3}$ and $x=1$.
+		
+		\ind $Proof:$
+		
+			\ind \ind I will prove this using the Intermediate Value Theorem.
+		
+			\ind \ind Plugging in $\frac{2}{3}$ into the equation, we get :
+			
+			\ind \ind $\frac{2^3}{3^3}$ + $\frac{2^2}{3^2}$ - 1.
+		
+			\ind \ind $\iff$ $\frac{8}{27} + \frac{4}{9}$ - 1.   
+		
+			\ind \ind $\iff$ $\frac{8}{27} + \frac{12}{27}$ - 1.
+			
+			\ind \ind $\iff$ $\frac{20}{27}$ - $\frac{27}{27}$.
+			
+			\ind \ind  $\iff$ $\frac{-7}{27}$. 
+			
+			\ind \ind Now plugging in 1 in the equation, we get :
+			
+			\ind \ind $1^3$ + $1^2$ -1.
+			
+			\ind \ind $\iff$ 1 + 1 - 1.
+			
+			\ind \ind $\iff$ 1.
+			
+			Because 	$x^3 + x^2 -1$ is continous on the interval [$\frac{2}{3}$, 1]
+			
+			($\frac{d}{dx}$[$x^3 + x^2 -1$]=$x^2 + 2x$, which is strictly increasing), and zero
+			
+			is between the outputs of f($\frac{2}{3}$) and f(1), by the I.V.T there must be a real number
+			$c$ s.t. f($c$) = 0. This proves a real number solution exists.
+			
+			Let $r$ $\in$ [$\frac{2}{3}$, 1] and f($r$)=0.
+			
+			It's the case such that : $r^3 + r^2 -1 = 0 = c^3 + c^2 - 1$.
+			
+			$\iff r^3 - c^3 + r^2 - c^2 = 0$.			
+			
+			$\iff (r-c)(r^2 + rc + c^2)+(r-c)(r+c) = 0$.
+			
+			$\iff (r-c)[(r^2 + rc + c^2)+(r+c)] = 0$.
+			
+			$\iff (r-c) = 0$.
+			
+			$\iff r = c$.
+			
+			This proves the real solution is unique.
+			
+			\ind \ind \ind \ind \ind \ind \ind \ind \ind \ind \ind \ind {%
+				\setlength{\fboxsep}{1pt}%
+				\setlength{\fboxrule}{2pt}%
+				\fbox{\includegraphics[height=.9cm]{proof.jpeg}}
+			}%		
+	\end{enumerate}
+
+\end {document}
